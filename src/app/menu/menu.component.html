@@ -1,55 +1,33 @@
-<div class="screen">
-    <header>
-        <a class="target-burger">
-            <ul class="buns">
-                <li class="bun"></li>
-                <li class="bun"></li>
-            </ul>
-            <!--buns-->
-        </a>
-        <!--target-burger-->
-    </header>
-    <nav class="main-nav" role="navigation">
-        <ul>
-            <li><a href=""><span>My Account</span></a></li>
-            <li><a href=""><span>Billing Information</span></a></li>
-            <li><a href=""><span>Order Tracker</span></a></li>
-            <li><a href=""><span>Change Password</span></a></li>
-            <li><a href=""><span>Log Out</span></a></li>
-        </ul>
-    </nav>
-    <!--main-nav-->
-    <div class="container">
-        <div class="app-content">
-            <ul class="content-list">
-                <li>
-                    <article>
-                        <figure>
-                            <img src="https://unsplash.imgix.net/photo-1428930377079-45a584b6dd6b?dpr=2&fit=crop&fm=jpg&h=1575&q=75&w=1050"
-                                alt="The Jim Lewis Dalaman Briefcase">
-                            <figcaption>
-                                <span class="category">Accessories</span>
-                                <h1>Eli DeFaria Dalaman</h1>
-                                <span class="price"> &pound;255</span>
-                            </figcaption>
-                        </figure>
-                    </article>
-                </li>
-            </ul>
-            <!--content-list-->
+<form>
+    <div class="menu-rel">
+        <div class="menu">
+            <div class="menu-opcoes">
+                <div class="menu-hamburguer">
+                    <input type="checkbox" value="selected" id="menu-hamburguer" class="menu-input">
+                    <label for="menu-hamburguer" class="menu-label">
+                    <img src="http://svgshare.com/i/Jj.svg">
+                    </label>
+                    <div role="menu" id="menuid" class="menu-content">
+                        <div class="menu-list">
+                            <div class="menu-list-item fechar-lado"><button class="fechar" type="reset">
+                             <i class="fa fa-times-circle fa-2x" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="menu-list-item"><a href="#">Home</a></div>
+                            <div class="menu-list-item"><a href="#">Usage</a></div>
+                            <div class="menu-list-item"><a href="#">Getting Started</a></div>
+                            <div class="menu-list-item"><a href="#">Templates</a></div>
+                            <div class="menu-list-item"><a href="#">Download</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-principal">
+                <div class="logo-prinipal">
+                    <img src="../assets/img/logo-principal.png">
+                </div>
+            </div>
+            <div class="menu-iconos"></div>
         </div>
-        <!--app-content-->
     </div>
-    <!--contaienr-->
-</div>
-<!--screen-->
-
-<script>
-    //Custom JS
-    $(document).ready(function () {
-        $('a.target-burger').click(function (e) {
-            $('div.container, nav.main-nav, a.target-burger').toggleClass('toggled');
-            e.preventDefault();
-        });//target-burger-click
-    });//doc-rdys
-</script>
+</form>
+<div class="fundo-cor-degrade-roxo"></div>

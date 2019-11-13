@@ -14,8 +14,8 @@ html {
     position: fixed;
     z-index: 2;
     width: 100%;
-    height: 60px;
-    background: #004b93;
+    height: 4.2em;
+    background: #004e9b;
     display: flex;
     flex-wrap: no-wrap;
     justify-content: center;
@@ -28,8 +28,9 @@ html {
 }
 
 .menu-hamburguer img {
-    width: 100%;
-    height: 30px;
+    min-width: 100%;
+    height: 3.75em;
+    width: 3.75em;
 }
 
 .fundo-cor-degrade-roxo {
@@ -52,16 +53,44 @@ html {
 
 .menu-principal {
     flex-grow: 100;
+    width: 100%;
 }
 
 .menu-principal ul {
     width: 90%;
-    text-align: right;
+    text-align: left;
     justify-content: flex-end;
+    padding: 0px!important;
+    margin: 0px!important;
 }
 
 .menu-principal ul li {
     display: inline-block;
+}
+
+#logologo-principal {
+    width: 50%;
+}
+
+.img-logo-principal {
+    position: relative;
+    top: -0.3em;
+    height: 4.2em;
+}
+
+#logologo-melp {
+    width: 45%;
+}
+
+.img-logo-melp {
+    position: relative;
+    top: -0.1em;
+    float: right;
+    left: 10%;
+}
+
+#logologo-avatar {
+    width: 5%;
 }
 
 .menu-principal ul li a {
@@ -81,7 +110,7 @@ html {
     display: inline-block;
     transition: 1s;
     z-index: 99;
-    width: 4.5em;
+    width: 3.75em;
 }
 
 .menu-input {
@@ -119,27 +148,16 @@ html {
 
 .menu-list {
     text-align: center;
-    text-align: center;
     flex-grow: 1;
-    background: rgba(0, 0, 0, 0.9);
     height: 90vh;
     margin: 0;
     padding: 0;
     width: 30%;
-    left: 4.5em;
-    position: relative;
-    top: -20.5px;
+    top: -0.8em;
     z-index: 99;
-    -grow: 1;
-    background: rgba(0, 0, 0, 0.9);
-    height: 90vh;
-    margin: 0;
-    padding: 0;
-    width: 30%;
-    left: 9.5vh;
+    background: #ffffff;
     position: relative;
-    top: -20.5px;
-    ;
+    box-shadow: 7px -1px 4px -3px rgba(148, 148, 148, 1);
 }
 
 .menu-list-item {
@@ -262,7 +280,7 @@ html {
 }
 
 .menu-iconos {
-    width: 10vh;
+    width: 3.75em;
     height: 100vh;
     background-color: #ffffff;
     position: absolute;
@@ -276,9 +294,21 @@ html {
     top: -1px;
 }
 
-.footer-mercantil {
-    background: #eeeeee;
-    z-index: 999;
+.logo-banca {
+    position: absolute;
+    left: 80%;
+    top: 1em;
+}
+
+.avatar {
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    height: 2.8em;
+    width: 2.8em;
+    float: right;
+    top: 0.6em;
     position: relative;
-    height: 6vh;
+    left: 7vw;
+    margin-left: 5vw;
 }

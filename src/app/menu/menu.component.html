@@ -1,34 +1,39 @@
-<form>
-    <div class="menu-rel">
-        <div class="menu">
-            <div class="menu-opcoes">
-                <div class="menu-hamburguer">
-                    <input type="checkbox" value="selected" id="menu-hamburguer" class="menu-input">
-                    <label for="menu-hamburguer" class="menu-label">
-                    <img src="../assets/img/menu.png">
-                    </label>
-                    <div role="menu" id="menuid" class="menu-content">
-                        <div class="menu-list">
-                            <div class="menu-list-item fechar-lado"><button class="fechar" type="reset">
-                             <i class="fa fa-times-circle fa-2x" aria-hidden="true"></i></button>
-                            </div>
-                            <div class="menu-list-item"><a href="#">Home</a></div>
-                            <div class="menu-list-item"><a href="#">Usage</a></div>
-                            <div class="menu-list-item"><a href="#">Getting Started</a></div>
-                            <div class="menu-list-item"><a href="#">Templates</a></div>
-                            <div class="menu-list-item"><a href="#">Download</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="menu-principal">
-                <ul>
-                    <li id="logologo-principal"><img class="img-logo-principal" src="../assets/img/logo-principal.png"></li>
-                    <li id="logologo-melp"><img class="img-logo-melp" src="../assets/img/MELP2.png"></li>
-                    <li id="logologo-avatar"><img class="avatar" src="https://sergiosanzweb.com/wp-content/uploads/2018/12/unicorn.gif"></li>
-                </ul>
-            </div>
-            <div class="menu-iconos"></div>
-        </div>
+<div class="container-fluid">
+    <ul class="nav navbar-mercantil">
+        <li class="nav-item" id="nav">
+            <img src="./assets/img/menu.png" alt="" class="img-fluid">
+        </li>
+        <li class="nav-item" id="nav">
+            <img src="./assets/img/logo-principal.png" alt="" class="img-fluid">
+        </li>
+        <li class="nav-item" id="titulo-mercantil">
+            <p class="titulo-mercantil">Mercantil En Línea Personas</p>
+        </li>
+    </ul>
+</div>
+
+<nav role="navigation">
+    <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+            <a href="#">
+                <li>Home</li>
+            </a>
+            <a href="#">
+                <li>About</li>
+            </a>
+            <a href="#">
+                <li>Info</li>
+            </a>
+            <a href="#">
+                <li>Contact</li>
+            </a>
+            <a href="https://erikterwan.com/" target="_blank">
+                <li>Show me more</li>
+            </a>
+        </ul>
     </div>
-</form>
+</nav>

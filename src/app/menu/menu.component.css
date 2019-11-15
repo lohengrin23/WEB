@@ -1,314 +1,184 @@
-@import url("https://fonts.googleapis.com/css?family=Bree+Serif");
-* {
-    margin: 0 auto;
-    padding: 0 auto;
-    font-family: "Open Sans", sans-serif;
-}
-
-body,
-html {
-    height: 100%;
-}
-
-.menu {
+.navbar-mercantil {
+    background-color: #004e9b;
     position: fixed;
-    z-index: 2;
-    width: 100%;
     height: 4.2em;
-    background: #004e9b;
-    display: flex;
-    flex-wrap: no-wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
-
-.menu-hamburguer {
-    max-height: 100%;
-}
-
-.menu-hamburguer img {
-    min-width: 100%;
-    height: 3.75em;
-    width: 3.75em;
-}
-
-.fundo-cor-degrade-roxo {
-    background-color: #FCFBF6;
     width: 100%;
-    min-height: 100%;
-    height: 90vh;
-    position: relative;
-    top: -2vh;
+    right: 0em;
 }
 
-.menu-opcoes {
-    flex-grow: 1;
-}
-
-.menu-rel {
-    position: relative;
-    height: 80px;
-}
-
-.menu-principal {
-    flex-grow: 100;
-    width: 100%;
-}
-
-.menu-principal ul {
-    width: 90%;
-    text-align: left;
-    justify-content: flex-end;
-    padding: 0px!important;
-    margin: 0px!important;
-}
-
-.menu-principal ul li {
-    display: inline-block;
-}
-
-#logologo-principal {
-    width: 50%;
-}
-
-.img-logo-principal {
-    position: relative;
-    top: -0.3em;
+#nav img {
     height: 4.2em;
+    width: 100%;
 }
 
-#logologo-melp {
-    width: 45%;
+#titulo-mercantil {
+    width: 40%;
 }
 
-.img-logo-melp {
+.titulo-mercantil {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    color: #ffffff;
+    font-weight: 545;
     position: relative;
-    top: -0.1em;
+    margin: 1.3em;
     float: right;
-    left: 10%;
+    left: 20vw;
 }
 
-#logologo-avatar {
-    width: 5%;
+
+/*
+ * Made by Erik Terwan
+ * 24th of November 2015
+ * MIT License
+ *
+ *
+ * If you are thinking of using this in
+ * production code, beware of the browser
+ * prefixes.
+ */
+
+body {
+    margin: 0;
+    padding: 0;
+    /* make it look decent enough */
+    background: #232323;
+    color: #cdcdcd;
+    font-family: "Avenir Next", "Avenir", sans-serif;
 }
 
-.menu-principal ul li a {
+a {
     text-decoration: none;
-    text-transform: uppercase;
-    color: #824baa;
-    margin-right: 20px;
-    transition: 0.5s;
-    border-color: #ae4bcf;
-    font-size: 14px;
-    font-weight: 300;
+    color: #232323;
+    transition: color 0.3s ease;
 }
 
-.menu-label {
-    font-size: 1em;
-    cursor: pointer;
-    display: inline-block;
-    transition: 1s;
-    z-index: 99;
-    width: 3.75em;
+a:hover {
+    color: tomato;
 }
 
-.menu-input {
-    display: none;
-    transition: 1s;
-}
-
-.fundo-menu {
-    background: #ccc;
-    transition: 1s;
-}
-
-.menu-content {
-    width: 100%;
-    height: 90%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    transition: 1s;
-    top: 80px;
-}
-
-.menu-input:not(checked)~.menu-content {
-    display: none;
-    transition: 1s;
-}
-
-.menu-input:checked~.menu-content {
+#menuToggle {
     display: block;
-    transition: 1s;
-}
-
-.menu-list {
-    text-align: center;
-    flex-grow: 1;
-    height: 90vh;
-    margin: 0;
-    padding: 0;
-    width: 30%;
-    top: -0.8em;
-    z-index: 99;
-    background: #ffffff;
     position: relative;
-    box-shadow: 7px -1px 4px -3px rgba(148, 148, 148, 1);
+    top: 22px;
+    left: 14px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
-.menu-list-item {
-    flex-grow: 1;
-    margin: 0;
-    padding: 0;
+#menuToggle input {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    top: -7px;
+    left: -1px;
+    opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+    -webkit-touch-callout: none;
 }
 
-.menu-list-item a {
-    font-family: "Bree Serif", serif;
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    font-size: 40px;
-    text-decoration: none;
-    transition: 0.6s;
-    text-transform: uppercase;
+
+/*
+ * Just a quick hamburger
+ */
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
 }
 
-.menu-list-item a:hover,
-.menu-list-item a:focus {
-    font-size: 44px;
-    -webkit-animation: example 2s infinite;
-    animation: example 2s infinite;
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
 }
 
-.fechar-lado {
-    text-align: right;
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+
+#menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
 }
 
-.fechar {
-    color: #ae4bcf;
-    border: none;
-    background: transparent;
+
+/*
+ * But let's hide the middle one.
+ */
+
+#menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+
+#menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+
+#menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    padding: 10px 0;
     font-size: 22px;
-    padding: 1% 3%;
-    border-radius: 10px;
-    -webkit-animation: example 5s infinite;
-    animation: example 5s infinite;
 }
 
-@keyframes example {
-    0% {
-        color: #584b88;
-    }
-    25% {
-        color: #ae4bcf;
-    }
-    50% {
-        color: #584b88;
-    }
-    75% {
-        color: #ae4bcf;
-    }
-    100% {
-        color: #584b88;
-    }
+
+/*
+ * And let's slide it in from the left
+ */
+
+#menuToggle input:checked~ul {
+    transform: none;
 }
 
-@media only screen and (max-width: 500px) {
-    .menu-principal ul {
+@media (max-width: 575.98px) {
+    .titulo-mercantil {
         display: none;
     }
-    .menu-list {
-        background: rgba(0, 0, 0, 0.9);
-    }
-    .menu-list-item a {
-        font-size: 20px !important;
-    }
-    .menu-list-item a:hover,
-    .menu-list-item a:focus {
-        font-size: 22px !important;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .titulo-mercantil {
+        display: none;
     }
 }
 
-.fundo-teste2 {
-    background: #fff;
-    width: 100%;
-    padding-top: 100px;
-    padding-bottom: 100px;
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .titulo-mercantil {
+        display: none;
+    }
 }
 
-.fundo-teste2 p {
-    font-family: "Bree Serif", serif;
-    text-align: center;
-    font-size: 22px;
-    opacity: 0.5;
-    transition: 1s;
-}
+@media (min-width: 992px) and (max-width: 1199.98px) {}
 
-.fundo-teste2 p:hover {
-    opacity: 1;
-}
-
-.fundo-teste2 a {
-    font-family: "Bree Serif", serif;
-    font-size: 22px;
-    text-decoration: none;
-}
-
-.botao-menu-atencao {
-    border: 1px solid #754ba0;
-    width: 100px !important;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    display: block;
-    color: #fff !important;
-    transition: 1s;
-    border-radius: 10px;
-    text-align: center;
-    background-color: #754ba0;
-    background: linear-gradient(to right, #584b88, #ae4bcf);
-    cursor: pointer;
-    font-weight: 500 !important;
-}
-
-.botao-menu-atencao:hover,
-.botao-menu-atencao:focus {
-    background: #584b88 !important;
-}
-
-.menu-iconos {
-    width: 3.75em;
-    height: 100vh;
-    background-color: #ffffff;
-    position: absolute;
-    top: 100%;
-    left: 0px;
-    box-shadow: 7px -1px 4px -3px rgba(148, 148, 148, 1);
-}
-
-.logo-principal {
-    position: relative;
-    top: -1px;
-}
-
-.logo-banca {
-    position: absolute;
-    left: 80%;
-    top: 1em;
-}
-
-.avatar {
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center;
-    height: 2.8em;
-    width: 2.8em;
-    float: right;
-    top: 0.6em;
-    position: relative;
-    left: 7vw;
-    margin-left: 5vw;
-}
+@media (min-width: 1200px) {}

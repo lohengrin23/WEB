@@ -152,6 +152,14 @@ a:hover {
     font-size: 22px;
 }
 
+.boton-menu {
+    cursor: pointer;
+}
+
+.prueba {
+    background-color: blueviolet;
+}
+
 
 /*
  * And let's slide it in from the left
